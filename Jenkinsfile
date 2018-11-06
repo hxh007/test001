@@ -13,7 +13,6 @@ pipeline {
         // 若勾选在pipelie完成后会邮件通知测试人员进行验收
         booleanParam(name: 'isCommitQA',description: '是否邮件通知测试人员进行人工验收',defaultValue: false )
     }
-    }
     // 常量参数
     environment { 
         // git 服务全系统只读账号cred_id
