@@ -69,9 +69,12 @@ pipeline {
                 serverName=split[2]
                 serverPasswd=split[3]
             }
-              echo "starting fetchCode from ${params.repoUrl}......"
-              // 获取源代码
-             git branch: 'master', credentialsId: 'github_test', url: 'https://github.com/hxh007/test001.git'
+            echo "starting fetchCode from ${params.repoUrl}......"
+            // 获取源代码
+            dir('/root/.jenkins/workspace/') {
+                    deleteDir()
+                    git branch: 'master', credentialsId: 'github_test', url: 'https://github.com/hxh007/test001.git'
+                }
             }
         }
         // stage('单元测试') {
