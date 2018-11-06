@@ -5,7 +5,7 @@ pipeline {
         // git代码路径
         string(name:'repoUrl', defaultValue:'https://github.com/hxh007/test001.git', description:'git代码路径')
         string(name:'repoBranch', defaultValue:'master', description:'git分支名称')
-        choice(name: 'server',choices:'192.168.181.132,22,root,hxh999999, description: '测试服务器列表选择(IP,JettyPort,Name,Passwd)')
+        choice(name: 'server', choices:'192.168.181.132,22,root,hxh999999', description: '测试服务器列表选择(IP,JettyPort,Name,Passwd)')
         // 测试服务器的dubbo服务端口
         string(name:'dubboPort', defaultValue: '31100', description: '测试服务器的dubbo服务端口')
         // 单元测试代码覆盖率要求，各项目视要求调整参数
