@@ -71,7 +71,7 @@ pipeline {
             }
               echo "starting fetchCode from ${params.repoUrl}......"
               // 获取源代码
-             git credentialsId:CRED_ID, url:params.repoUrl, branch:params.repoBranch
+             git branch: 'master', credentialsId: 'github_test', url: 'https://github.com/hxh007/test001.git'
             }
         }
         // stage('单元测试') {
